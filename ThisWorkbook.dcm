@@ -7,36 +7,36 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = True
-'g‚Á‚Ä‚İ‚½‚çƒ{ƒ^ƒ“‚Æ‚©‚É“o˜^‚µ‚½•û‚ª—Ç‚¢–‚É‹C‚Ã‚¢‚½‚ª
-'‚Æ‚è‚ ‚¦‚¸‚±‚Ì‚Ü‚Ü
+'ä½¿ã£ã¦ã¿ãŸã‚‰ãƒœã‚¿ãƒ³ã¨ã‹ã«ç™»éŒ²ã—ãŸæ–¹ãŒè‰¯ã„äº‹ã«æ°—ã¥ã„ãŸãŒ
+'ã¨ã‚Šã‚ãˆãšã“ã®ã¾ã¾2019/1/21
 'Private Sub Workbook_SheetChange(ByVal Sh As Object, ByVal Target As Range)
-'    Dim strƒL[ As String
+'    Dim strã‚­ãƒ¼ As String
 '    Dim strFile As String
 '    Dim RRR As Range
-'    Dim f_s As Integer
+'    Dim f_è¡Œ As Integer
 '    Dim Newbook As Workbook
 '    Dim cnt As Integer
-'    Dim fn As String 'ƒuƒbƒN–¼@‚Ù‚Ú‚Ô‚Â‚©‚ç‚È‚¢—l‚É@ƒtƒHƒ‹ƒ_‚ğˆê’èŠÔ‚ÅŠÄ‹‚È‚ç‚Î
+'    Dim fn As String 'ãƒ–ãƒƒã‚¯åã€€ã»ã¼ã¶ã¤ã‹ã‚‰ãªã„æ§˜ã«ã€€ãƒ•ã‚©ãƒ«ãƒ€ã‚’ä¸€å®šæ™‚é–“ã§ç›£è¦–ãªã‚‰ã°
 '
 '    If Target.Row = 2 And Target.Column = 2 And Sh.Name = "Sheet1" Then
 '        fn = ReplaceX(Date & Time & ".xlsx", ":/", "")
-''        fn = replace(replace(Date & Time & ".xlsx", "/", ""), ":", "")  ':/‚ğæ‚èœ‚­
-'        strƒL[ = Sheets("Sheet1").Cells(2, 2).Value
-'        Set RRR = Sheets("mf").Columns(1).find(what:=strƒL[)
+''        fn = replace(replace(Date & Time & ".xlsx", "/", ""), ":", "")  ':/ã‚’å–ã‚Šé™¤ã
+'        strã‚­ãƒ¼ = Sheets("Sheet1").Cells(2, 2).Value
+'        Set RRR = Sheets("mf").Columns(1).find(what:=strã‚­ãƒ¼)
 '        If Not RRR Is Nothing Then
-'            f_s = RRR.Row
-'            Cells(3, 2) = "C:\ttt\" & Sheets("mf").Cells(f_s, 1) & "_" & Sheets("mf").Cells(f_s, 2)
-'            '‚±‚±‚Åˆ¶æ–¼‚Æ‚©‚àİ’è@@Š„ˆ¤
+'            f_è¡Œ = RRR.Row
+'            Cells(3, 2) = "C:\ttt\" & Sheets("mf").Cells(f_è¡Œ, 1) & "_" & Sheets("mf").Cells(f_è¡Œ, 2)
+'            'ã“ã“ã§å®›å…ˆåã¨ã‹ã‚‚è¨­å®šã€€ã€€å‰²æ„›
 '            strFile = Cells(3, 2) & "\" & fn
 '            Set Newbook = Workbooks.Add
 '            Newbook.SaveAs Filename:=strFile
 '            cnt = Workbooks(fn).Sheets.Count
 '            ThisWorkbook.Activate
 '            Sheets("Sheet1").Copy After:=Workbooks(fn).Sheets(cnt)
-'            'Debug.Print Date & " " & Time & "_" & f_s
+'            'Debug.Print Date & " " & Time & "_" & f_è¡Œ
 '        Else
-'            '‚b‚c‚ª‘¶İ‚µ‚È‚¢
-'            Cells(3, 2) = "‚b‚c–³‚µ"
+'            'ï¼£ï¼¤ãŒå­˜åœ¨ã—ãªã„æ™‚
+'            Cells(3, 2) = "ï¼£ï¼¤ç„¡ã—"
 '        End If
 '    End If
 '
