@@ -1,0 +1,44 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+END
+Attribute VB_Name = "ThisWorkbook"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+'使ってみたらボタンとかに登録した方が良い事に気づいたが
+'とりあえずこのまま
+'Private Sub Workbook_SheetChange(ByVal Sh As Object, ByVal Target As Range)
+'    Dim strキー As String
+'    Dim strFile As String
+'    Dim RRR As Range
+'    Dim f_行 As Integer
+'    Dim Newbook As Workbook
+'    Dim cnt As Integer
+'    Dim fn As String 'ブック名　ほぼぶつからない様に　フォルダを一定時間で監視ならば
+'
+'    If Target.Row = 2 And Target.Column = 2 And Sh.Name = "Sheet1" Then
+'        fn = ReplaceX(Date & Time & ".xlsx", ":/", "")
+''        fn = replace(replace(Date & Time & ".xlsx", "/", ""), ":", "")  ':/を取り除く
+'        strキー = Sheets("Sheet1").Cells(2, 2).Value
+'        Set RRR = Sheets("mf").Columns(1).find(what:=strキー)
+'        If Not RRR Is Nothing Then
+'            f_行 = RRR.Row
+'            Cells(3, 2) = "C:\ttt\" & Sheets("mf").Cells(f_行, 1) & "_" & Sheets("mf").Cells(f_行, 2)
+'            'ここで宛先名とかも設定　　割愛
+'            strFile = Cells(3, 2) & "\" & fn
+'            Set Newbook = Workbooks.Add
+'            Newbook.SaveAs Filename:=strFile
+'            cnt = Workbooks(fn).Sheets.Count
+'            ThisWorkbook.Activate
+'            Sheets("Sheet1").Copy After:=Workbooks(fn).Sheets(cnt)
+'            'Debug.Print Date & " " & Time & "_" & f_行
+'        Else
+'            'ＣＤが存在しない時
+'            Cells(3, 2) = "ＣＤ無し"
+'        End If
+'    End If
+'
+'End Sub
+
